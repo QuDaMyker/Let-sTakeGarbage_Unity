@@ -5,8 +5,8 @@ using UnityEngine;
 public class DestroyEventSOng : MonoBehaviour
 {
     public static DestroyEventSOng instance;
-    public GameObject sd;
-    private void Awake()
+    public static  GameObject sd;
+    private void Awake(GameObject sd)
     {
         DontDestroyOnLoad(sd);
 
