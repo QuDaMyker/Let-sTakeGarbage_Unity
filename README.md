@@ -9,7 +9,8 @@
      *  
      *  Topic: Bảo Về Môi Trường Và Biến Đổi Khí Hậu
      *  Đối Tượng Tiếp Cận: Trẻ em
-     *  Mô tả: Ứng dụng đơn giản hướng đến đối tượng trẻ em, giúp các em nhận biết, phân loại được rác thải hữu cơ, vô cơ, ...
+     *  Mô tả: Ứng dụng đơn giản hướng đến đối tượng trẻ em, 
+     *  giúp các em nhận biết, phân loại được rác thải hữu cơ, vô cơ, ...
      *  
      */
 ```
