@@ -165,4 +165,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5905bc602deded64fb75028b78e4eb0d, type: 3}
   - {fileID: 21300000, guid: a896093f9638e07499b8f2fc7822a839, type: 3}
   - {fileID: 21300000, guid: 33592299e0c176242a1a5677d4e7187b, type: 3}
-  OrganicGarbageSprites: {fileID: 0}
+  checkEffect: {fileID: 5646559147455470455, guid: 40656639191e4704da98818d5c712ebf, type: 3}
+  xIcon: {fileID: 21300000, guid: 32f2df3bf801d8843bde6a988f260d1d, type: 3}

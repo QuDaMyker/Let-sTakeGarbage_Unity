@@ -17,9 +17,9 @@ public static class CONS
     public static int TimeGarbageAppearMax = 2;
     public static float TimeFrame = 0.01f;
     //lv 2
-    public static float TimeWindGap = 1f;
-    public static float Friction = 0.005f;
-    public static float WindSpeed = 0.2f;
+    public static float TimeWindGap = 2f;
+    public static float Friction = 0.02f;
+    public static float WindSpeed = 0.4f;
     public static float SpeedRolling =  - 100f;
 
 

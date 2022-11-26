@@ -15,6 +15,8 @@ public class GarbageControllerForLv2 : MonoBehaviour
     public float bgWidth;
     public List<Sprite> ImagesOrganic;
     public List<Sprite> ImagesInorganic;
+    public GameObject checkEffect;
+    public Sprite xIcon;
     private bool isDrag;
     private GameObject obj;
     //private float timeAppear;
@@ -178,14 +180,17 @@ public class GarbageControllerForLv2 : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("OrganicTrashBin") && Type == (int)CONS.EType.ORGANIC) 
                 {
+                    AddCheckEffect(collision.transform, true);
                     GameController.instance.GainScore();
                 }
                 else if (collision.gameObject.CompareTag("InorganicTrashBin") && Type == (int)CONS.EType.INORGANIC)
                 {
+                    AddCheckEffect(collision.transform, true);
                     GameController.instance.GainScore();
                 }
                 else
                 {
+                    AddCheckEffect(collision.transform, false);
                     Debug.Log(0);
                 }
 
@@ -199,5 +204,12 @@ public class GarbageControllerForLv2 : MonoBehaviour
     {
         Speed = CONS.WindSpeed;
         Debug.Log(Speed);
+    }
+    void AddCheckEffect(Transform pos, bool iswrong)
+    {
+        GameObject obj = Instantiate(checkEffect, pos);
+        obj.transform.position = new Vector3(6.2f, 3.1f, 0);
+        if (!iswrong) obj.gameObject.GetComponent<SpriteRenderer>().sprite = xIcon;
+        Destroy(obj, 1);
     }
 }

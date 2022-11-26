@@ -19,6 +19,8 @@ public class GarbageController : MonoBehaviour
     private float timeAppear;
     private float alpha;
     private Vector2 Direct;
+    public GameObject checkEffect;
+    public Sprite xIcon;
     //private 
     float time = 0;
     private void Spawn()
@@ -132,15 +134,22 @@ public class GarbageController : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("OrganicTrashBin") && Type == (int)CONS.EType.ORGANIC) 
                 {
+                    AddCheckEffect(collision.transform, true);
                     GameController.instance.GainScore();
                 }
                 else if (collision.gameObject.CompareTag("InorganicTrashBin") && Type == (int)CONS.EType.INORGANIC)
                 {
+                    AddCheckEffect(collision.transform, true);
                     GameController.instance.GainScore();
+
+
                 }
                 else
                 {
+                    AddCheckEffect(collision.transform, false);
                     Debug.Log(0);
+
+
                 }
 
                 Spawn();
@@ -148,5 +157,12 @@ public class GarbageController : MonoBehaviour
                 //enabled = false;
             }
         }
+    }
+    void AddCheckEffect(Transform pos, bool iswrong)
+    {
+        GameObject obj = Instantiate(checkEffect, pos);
+        obj.transform.position = new Vector3(0, -1.5f, 0);
+        if (!iswrong) obj.gameObject.GetComponent<SpriteRenderer>().sprite = xIcon;
+        Destroy(obj, 1);
     }
 }

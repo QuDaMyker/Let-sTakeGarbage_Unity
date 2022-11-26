@@ -38,12 +38,6 @@ public class ResultPanel : MonoBehaviour
     {
         if (GameController.instance.Score >= GameController.instance.minScore)
         {
-            if (SceneManager.GetActiveScene().name=="Lv2"){
-                scoreTxt.text = "Bravo! You are the winner! ";
-                playBtn.SetActive(false);
-                isFinished = true;
-                return;
-            }
             scoreTxt.text = "Congratulation! You have finished the stage with " + GameController.instance.Score.ToString() + " points!";
             playbtnTxt.text = "Next Stage";
             isFinished = true;
@@ -61,7 +55,6 @@ public class ResultPanel : MonoBehaviour
         {
 
             SceneManager.LoadScene("mainMenu");
-            Application.LoadLevel("Lv2");
         }
         else
         {
