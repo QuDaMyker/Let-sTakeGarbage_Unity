@@ -7,7 +7,6 @@ public class LevelMenuController : MonoBehaviour
     public void PlayGame(int lv)
     {
         Application.LoadLevel($"Lv{lv}");
-        Debug.Log(lv);
     }
     
     public void BackToMenu()
