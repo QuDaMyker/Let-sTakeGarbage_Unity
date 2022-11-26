@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 1;
         Timeout = CONS.TimeOut;
         txtScore.text = "Score: " + Score.ToString();
         txtTimeout.text = "Time left: " + Timeout.ToString();
@@ -27,7 +28,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.Timeout == 0) return;
+        if (Timeout == 0) return;
         UpdateTimeout();
         txtScore.text = "Score: " + Score.ToString();
         txtTimeout.text = "Time: " + Mathf.RoundToInt(Timeout).ToString();

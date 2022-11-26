@@ -54,12 +54,16 @@ public class ResultPanel : MonoBehaviour
         if (isFinished)
         {
 
-            Debug.Log("Load next stage");
+            SceneManager.LoadScene("mainMenu");
         }
         else
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
+    }
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene("mainMenu");
     }
 }
