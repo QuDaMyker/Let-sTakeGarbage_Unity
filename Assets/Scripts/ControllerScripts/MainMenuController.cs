@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField]    
 	public GameObject pausePanelBegin;
+    public GameObject PanelInfo;
     //public static AudioListener audioListener;
     public static bool isMute = false;
     public void Mute()
@@ -39,6 +40,13 @@ public class MainMenuController : MonoBehaviour
     {
         pausePanelBegin.SetActive (false);
     }
-    
+    public void btnInfo()
+    {
+        PanelInfo.SetActive(true);
+    }
+    public void btnClosePanelInfo()
+    {
+        PanelInfo.SetActive(false);
+    }
 }
 
