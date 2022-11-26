@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LevelMenuController : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayGame(int lv)
     {
-        Application.LoadLevel("PlayGame");
+        Application.LoadLevel($"Lv{lv}");
+        Debug.Log(lv);
     }
-
+    
     public void BackToMenu()
     {
         Application.LoadLevel("mainMenu");
