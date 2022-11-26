@@ -20,6 +20,7 @@ public class GarbageController : MonoBehaviour
     private float alpha;
     private Vector2 Direct;
     //private 
+    float time = 0;
     private void Spawn()
     {
         SpriteRenderer sprrdr = obj.GetComponent<SpriteRenderer>();
@@ -86,17 +87,25 @@ public class GarbageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.Timeout == 0) return;
-        if (! isDrag)
+        if (time > CONS.TimeFrame)
         {
-            if (obj.transform.position.x <= bgWidth / 2 && obj.transform.position.x >= - bgWidth / 2) //CARE
+            if (GameController.instance.Timeout == 0) return;
+            if (!isDrag)
             {
-                Move();
+                if (obj.transform.position.x <= bgWidth / 2 && obj.transform.position.x >= -bgWidth / 2) //CARE
+                {
+                    Move();
+                }
+                else
+                {
+                    Spawn();
+                }
             }
-            else
-            {
-                Spawn();
-            }
+            time = 0;
+        }
+        else
+        {
+            time += Time.deltaTime;
         }
     }
     public void OnMouseDrag()
