@@ -1563,6 +1563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3143,7 +3144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timeout: 5
-  Score: 90
+  Score: 0
   minScore: 120
   txtScore: {fileID: 29068497}
   txtTimeout: {fileID: 857756807}
@@ -3177,7 +3178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resultPanel: {fileID: 97929517}
   score: 0
-  minScore: 100
+  minScore: 0
   scoreTxt: {fileID: 1816867049}
   infoTxt: {fileID: 1667893799}
   playbtnTxt: {fileID: 1688365289}
