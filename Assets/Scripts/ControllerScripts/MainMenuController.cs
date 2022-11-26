@@ -28,6 +28,11 @@ public class MainMenuController : MonoBehaviour
         Application.LoadLevel("LevelMenu");
         Debug.Log(this);
     }
+    public void openTutorial()
+    {
+        Application.LoadLevel("Tutorial");
+        Debug.Log(this);
+    }
     public void btnExit()
     {
         pausePanelBegin.SetActive (true);
