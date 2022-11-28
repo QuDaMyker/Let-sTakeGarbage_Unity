@@ -195,8 +195,9 @@ public class GarbageControllerForLv2 : MonoBehaviour
                 }
 
                 //Spawn();
-                obj.SetActive(false);
+                //obj.SetActive(false);
                 //enabled = false;
+                NextSpawn();
             }
         }
     }
