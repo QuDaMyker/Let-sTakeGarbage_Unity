@@ -12,5 +12,5 @@
      *  Mô tả: Ứng dụng đơn giản hướng đến đối tượng trẻ em, 
      *  giúp các em nhận biết, phân loại được rác thải hữu cơ, vô cơ, ...
      *  
-     */
+*/
 ```
